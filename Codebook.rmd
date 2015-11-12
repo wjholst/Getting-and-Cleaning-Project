@@ -40,15 +40,66 @@ The cleaning of the data consists of the following:
 - filter the training and test sets by selection only columns in the featuresToRead vector
 - column bind the subject, activity, and filtered variables with the cbind() function for both training and test data
 - row bind the two datasets from the prior operation
+- add the column headers from the FeatureLabels vector
+- substitute the description of the activity for the activity code
+- create a new dataset with the means of the 79 variables, grouped by subject and activity
+- write the results to a file called "combinedMeansTidy.txt"
+
+##Description of the variables in the combinedMeansTidy.txt file
 
 
-##Description of the variables in the tiny_data.txt file
-General description of the file including:
-
-'
-str(meansSet)
-'
- - Dimensions of the dataset
+ "Subject" - number of the subject participant
+ "Activity" - activity description, from one of six:
+ - 1            WALKING
+ - 2   WALKING_UPSTAIRS
+ - 3 WALKING_DOWNSTAIRS
+ - 4            SITTING
+ - 5           STANDING
+ - 6             LAYING
+  
+ The remaining varialble means:
+ 
+ [3] "tBodyAcc- Mean -X"               "tBodyAcc- Mean -Y"              
+ [5] "tBodyAcc- Mean -Z"               "tBodyAcc- StDev -X"             
+ [7] "tBodyAcc- StDev -Y"              "tBodyAcc- StDev -Z"             
+ [9] "tGravityAcc- Mean -X"            "tGravityAcc- Mean -Y"           
+[11] "tGravityAcc- Mean -Z"            "tGravityAcc- StDev -X"          
+[13] "tGravityAcc- StDev -Y"           "tGravityAcc- StDev -Z"          
+[15] "tBodyAccJerk- Mean -X"           "tBodyAccJerk- Mean -Y"          
+[17] "tBodyAccJerk- Mean -Z"           "tBodyAccJerk- StDev -X"         
+[19] "tBodyAccJerk- StDev -Y"          "tBodyAccJerk- StDev -Z"         
+[21] "tBodyGyro- Mean -X"              "tBodyGyro- Mean -Y"             
+[23] "tBodyGyro- Mean -Z"              "tBodyGyro- StDev -X"            
+[25] "tBodyGyro- StDev -Y"             "tBodyGyro- StDev -Z"            
+[27] "tBodyGyroJerk- Mean -X"          "tBodyGyroJerk- Mean -Y"         
+[29] "tBodyGyroJerk- Mean -Z"          "tBodyGyroJerk- StDev -X"        
+[31] "tBodyGyroJerk- StDev -Y"         "tBodyGyroJerk- StDev -Z"        
+[33] "tBodyAccMag- Mean "              "tBodyAccMag- StDev "            
+[35] "tGravityAccMag- Mean "           "tGravityAccMag- StDev "         
+[37] "tBodyAccJerkMag- Mean "          "tBodyAccJerkMag- StDev "        
+[39] "tBodyGyroMag- Mean "             "tBodyGyroMag- StDev "           
+[41] "tBodyGyroJerkMag- Mean "         "tBodyGyroJerkMag- StDev "       
+[43] "fBodyAcc- Mean -X"               "fBodyAcc- Mean -Y"              
+[45] "fBodyAcc- Mean -Z"               "fBodyAcc- StDev -X"             
+[47] "fBodyAcc- StDev -Y"              "fBodyAcc- StDev -Z"             
+[49] "fBodyAcc- Mean Freq-X"           "fBodyAcc- Mean Freq-Y"          
+[51] "fBodyAcc- Mean Freq-Z"           "fBodyAccJerk- Mean -X"          
+[53] "fBodyAccJerk- Mean -Y"           "fBodyAccJerk- Mean -Z"          
+[55] "fBodyAccJerk- StDev -X"          "fBodyAccJerk- StDev -Y"         
+[57] "fBodyAccJerk- StDev -Z"          "fBodyAccJerk- Mean Freq-X"      
+[59] "fBodyAccJerk- Mean Freq-Y"       "fBodyAccJerk- Mean Freq-Z"      
+[61] "fBodyGyro- Mean -X"              "fBodyGyro- Mean -Y"             
+[63] "fBodyGyro- Mean -Z"              "fBodyGyro- StDev -X"            
+[65] "fBodyGyro- StDev -Y"             "fBodyGyro- StDev -Z"            
+[67] "fBodyGyro- Mean Freq-X"          "fBodyGyro- Mean Freq-Y"         
+[69] "fBodyGyro- Mean Freq-Z"          "fBodyAccMag- Mean "             
+[71] "fBodyAccMag- StDev "             "fBodyAccMag- Mean Freq"         
+[73] "fBodyBodyAccJerkMag- Mean "      "fBodyBodyAccJerkMag- StDev "    
+[75] "fBodyBodyAccJerkMag- Mean Freq"  "fBodyBodyGyroMag- Mean "        
+[77] "fBodyBodyGyroMag- StDev "        "fBodyBodyGyroMag- Mean Freq"    
+[79] "fBodyBodyGyroJerkMag- Mean "     "fBodyBodyGyroJerkMag- StDev "   
+[81] "fBodyBodyGyroJerkMag- Mean Freq"
+> 
  - Summary of the data
  - Variables present in the dataset
 
