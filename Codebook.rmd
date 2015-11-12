@@ -1,22 +1,43 @@
 ---
-title: "Codebook template"
-author: "Your name here"
-date: "The date here"
-output:
-  html_document:
-    keep_md: yes
+title: "Getting and Cleaning Project Codebook"
+author: "Bill Holst"
+date: "11/12/2015"
 ---
 
 ## Project Description
-Short description of the project
+
+Process a set of data, collected from Samsung Galaxy S smartphone about wearable computing, creating a "tidy" data set. 
 
 ##Study design and data processing
 
+Use a series of R functions in an R script called run_analysis to download, clean, and process the data
+
 ###Collection of the raw data
-Description of how the data was collected.
+Original data was collected from Samsung Galaxy 5 smartphone and consists of 561 variables measured by the phone of 30 subjects.  The variables are in both a training and test set.  Data are available in a zip file from
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 ###Notes on the original (raw) data 
-Some additional notes (if avaialble, otherwise you can leave this section out).
+
+The original description of the data collected is at 
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+The file tree of the downloaded zip data is
+#  /UCI HAR Dataset
+#     /test
+#       subject_test.txt
+#       X_test.txt
+#       y_test.txt
+#     /train
+#       subject_train.txt
+#       X_train.txt
+#       y_train.txt
+#     activity_labels.txt
+#     features.txt
+#     features_info.txt
+#     README.txt
+
 
 ##Creating the tidy datafile
 
