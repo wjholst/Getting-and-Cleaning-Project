@@ -23,30 +23,24 @@ The original description of the data collected is at
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-The file tree of the downloaded zip data is
-'''
-  /UCI HAR Dataset
-     /test
-       subject_test.txt
-       X_test.txt
-       y_test.txt
-     /train
-       subject_train.txt
-       X_train.txt
-       y_train.txt
-     activity_labels.txt
-     features.txt
-     features_info.txt
-     README.txt
-'''
+In addtion to the training and test variable files, there is a subject file, a feature description file and two (training and test) activity files.  
 
 ##Creating the tidy datafile
 
-###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
+- download and unzip data with the unzip() function
+- load each of the files into memory with read.table() function
+- establish the eventual column headers from the features data, giving a set, featureLabels, of feature labels
+- identify the features that are either 'mean' or 'std', creating a vector featuresToRead to filter the variables
 
 ###Cleaning of the data
-Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
+
+The cleaning of the data consists of the following:
+
+- clean up the feature labels with some simple substitution, e.g. remove "()"
+- filter the training and test sets by selection only columns in the featuresToRead vector
+- column bind the subject, activity, and filtered variables with the cbind() function for both training and test data
+- row bind the two datasets from the prior operation
+
 
 ##Description of the variables in the tiny_data.txt file
 General description of the file including:
