@@ -24,7 +24,7 @@ The original description of the data collected is at
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
 The file tree of the downloaded zip data is
-
+'''
   /UCI HAR Dataset
      /test
        subject_test.txt
@@ -38,7 +38,7 @@ The file tree of the downloaded zip data is
      features.txt
      features_info.txt
      README.txt
-
+'''
 
 ##Creating the tidy datafile
 
