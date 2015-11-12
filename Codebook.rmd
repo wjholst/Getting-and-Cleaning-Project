@@ -44,6 +44,10 @@ The cleaning of the data consists of the following:
 
 ##Description of the variables in the tiny_data.txt file
 General description of the file including:
+
+'
+str(meansSet)
+'
  - Dimensions of the dataset
  - Summary of the data
  - Variables present in the dataset
