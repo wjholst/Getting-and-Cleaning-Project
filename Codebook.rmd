@@ -56,7 +56,7 @@ The cleaning of the data consists of the following:
  - 3 WALKING_DOWNSTAIRS
  - 4            SITTING
  - 5           STANDING
-  -6             LAYING
+ - 6             LAYING
   
  The remaining variable means (all num class):
  
