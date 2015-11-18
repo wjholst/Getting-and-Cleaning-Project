@@ -48,15 +48,15 @@ The cleaning of the data consists of the following:
 ##Description of the variables in the combinedMeansTidy.txt file
 
 
- "Subject" - number of the subject participant
+ "Subject" - number of the subject participant - numeric
  
- "Activity" - activity description, from one of six:
+ "Activity" - activity description (text), from one of six: 
  - 1            WALKING
  - 2   WALKING_UPSTAIRS
  - 3 WALKING_DOWNSTAIRS
  - 4            SITTING
  - 5           STANDING
- - 6             LAYING
+  -6             LAYING
   
  The remaining variable means (all num class):
  
