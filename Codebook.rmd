@@ -47,8 +47,16 @@ The cleaning of the data consists of the following:
 
 ##Description of the variables in the combinedMeansTidy.txt file
 
+For each record in the dataset it is provided: 
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
 
- "Subject" - number of the subject participant - numeric
+The script removes all but the mean and standard deviations from the 561 variables.
+
+ "Subject" - identifying umber of the subject participant - numeric
  
  "Activity" - activity description (text), from one of six: 
  - 1            WALKING
@@ -58,7 +66,7 @@ The cleaning of the data consists of the following:
  - 5           STANDING
  - 6             LAYING
   
- The remaining variable means (all num class):
+ The remaining variable means (all numeric class):
  
  [3] "tBodyAcc- Mean -X"               "tBodyAcc- Mean -Y"              
  [5] "tBodyAcc- Mean -Z"               "tBodyAcc- StDev -X"             
